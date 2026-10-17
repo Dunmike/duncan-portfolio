@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ===================================
+   MR D. FUTURISTIC PORTFOLIO EFFECTS
+   =================================== */
+
+/* Smooth scrolling between sections */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glowing futuristic emblem */
+@keyframes mrDGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(56, 189, 248, 0.12),
+      0 0 50px rgba(37, 99, 235, 0.08);
+  }
+
+  50% {
+    box-shadow:
+      0 0 35px rgba(56, 189, 248, 0.3),
+      0 0 80px rgba(37, 99, 235, 0.18);
+  }
+}
+
+/* Slowly rotating neon rings */
+@keyframes mrDRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating blue light */
+@keyframes mrDFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Reusable animation classes */
+.mr-d-glow {
+  animation: mrDGlow 4s ease-in-out infinite;
+}
+
+.mr-d-rotate {
+  animation: mrDRotate 30s linear infinite;
+}
+
+.mr-d-float {
+  animation: mrDFloat 5s ease-in-out infinite;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .mr-d-glow,
+  .mr-d-rotate,
+  .mr-d-float {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
