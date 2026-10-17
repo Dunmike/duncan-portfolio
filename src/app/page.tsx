@@ -144,6 +144,15 @@ export default function Home() {
             >
               Contact Me
             </a>
+              
+<a
+  href="/Duncan-Musembi-CV.pdf"
+  download="Duncan-Musembi-CV.pdf"
+  className="inline-flex items-center justify-center gap-2 rounded-xl border border-sky-400/40 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:bg-sky-400/10 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]"
+>
+  Download My CV <span aria-hidden="true">↓</span>
+</a>
+
           </div>
 
           <div className="mt-10 flex items-center gap-3 text-sm text-slate-400">
